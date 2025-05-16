@@ -1,0 +1,18 @@
+//def how package is built: using setuptools to build and create wheel(.whl)
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+//declare metadata & dependencies for prj -> pip & other tools can understand how to install prj
+[project]
+name = "mysite"
+description = "My Site"
+readme = "README.md"
+requires-python = ">=3.11"
+version = "0.0.1"
+dependencies = [
+  "fastapi",
+  "motor",
+]
+//find source code in "src/"
+[tool.setuptools.packages.find]
+where = ["src"]
