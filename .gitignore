@@ -1,1 +1,3 @@
-venv
+.venv
+mongodb/.env
+backend/.env
